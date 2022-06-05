@@ -1,0 +1,29 @@
+◾️ポスグレを起動させる
+$ brew services start postgres
+$ psql postgres
+
+//SQL Shell (psql)を起動する。
+//接続時に、パスワード以外、各質問に対して何も入力せずにenterキーを押してください。
+//postgres=#が表示されたら、コマンドを入力することができます。
+
+◾️データベースを作成します。
+$ CREATE DATABASE chat_db;
+
+◾️データベースに接続します。([optionキー] + [¥キー])
+$ \c chat_db;
+
+◾️テーブル作成例
+CREATE TABLE todolists (
+ id SERIAL NOT NULL,
+ todo VARCHAR(100) NOT NULL,
+ date DATE NOT NULL,
+ sche DATE NOT NULL,
+ rate INTEGER NOT NULL,
+ prio VARCHAR(100) NOT NULL,
+ PRIMARY KEY (id)
+);
+
+
+◾️table情報を見る
+$ \dt または 
+$ \d tablename

@@ -1,0 +1,3 @@
+◾️nodemonインストールがうまくできない時
+$ source ~/.zprofile
+
